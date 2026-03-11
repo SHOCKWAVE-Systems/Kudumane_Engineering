@@ -1,0 +1,13 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/contact/route": "/api/contact",
+  "/contact/page": "/contact",
+  "/core-business-1/page": "/core-business-1",
+  "/core-business-2/page": "/core-business-2",
+  "/core-business-3/page": "/core-business-3",
+  "/core-business-4/page": "/core-business-4",
+  "/page": "/",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml"
+}

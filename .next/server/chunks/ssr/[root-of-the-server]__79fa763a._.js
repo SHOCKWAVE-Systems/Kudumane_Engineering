@@ -1,0 +1,3 @@
+module.exports=[93695,(a,b,c)=>{b.exports=a.x("next/dist/shared/lib/no-fallback-error.external.js",()=>require("next/dist/shared/lib/no-fallback-error.external.js"))},70864,a=>{a.n(a.i(33290))},43619,a=>{a.n(a.i(79962))},13718,a=>{a.n(a.i(85523))},18198,a=>{a.n(a.i(45518))},62212,a=>{a.n(a.i(66114))},76057,a=>{"use strict";var b=a.i(7997),c=a.i(81071),d=a.i(94474);let e=(0,a.i(61135).getServiceBySlugOrThrow)("/core-business-4"),f=(0,d.buildPageMetadata)({title:`${e.title} | KUDUMANE ENGINEERING BRAKES & SUPPLIES`,description:e.metaDescription,path:"/core-business-4"});function g(){return(0,b.jsx)(c.CoreBusinessPage,{service:e})}a.s(["default",()=>g,"metadata",0,f])}];
+
+//# sourceMappingURL=%5Broot-of-the-server%5D__79fa763a._.js.map
