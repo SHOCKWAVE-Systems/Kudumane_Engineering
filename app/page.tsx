@@ -110,11 +110,20 @@ export default function HomePage() {
 
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
+          <div className="absolute inset-0">
+            <Image
+              src={withBasePath("/images/Dumptruck 2.png")}
+              alt=""
+              fill
+              className="object-cover opacity-30"
+              unoptimized
+            />
+          </div>
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-scroll opacity-20 lg:bg-fixed"
+            className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat opacity-35 lg:block lg:bg-fixed"
             style={{ backgroundImage: `url(${withBasePath("/images/Dumptruck 2.png")})` }}
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/55" />
         </div>
 
         <div className="relative">
