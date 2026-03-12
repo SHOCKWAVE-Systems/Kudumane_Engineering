@@ -119,10 +119,6 @@ export default function HomePage() {
               unoptimized
             />
           </div>
-          <div
-            className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat opacity-35 lg:block lg:bg-fixed"
-            style={{ backgroundImage: `url(${withBasePath("/images/Dumptruck 2.png")})` }}
-          />
           <div className="absolute inset-0 bg-black/55" />
         </div>
 
