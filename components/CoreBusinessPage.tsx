@@ -121,10 +121,6 @@ export function CoreBusinessPage({ service }: CoreBusinessPageProps) {
             <div className="absolute inset-0">
               <Image src={backdropImageSrc} alt="" fill className="object-cover opacity-30" unoptimized />
             </div>
-            <div
-              className="absolute inset-0 hidden bg-cover bg-center bg-no-repeat opacity-35 lg:block lg:bg-fixed"
-              style={{ backgroundImage: `url(${backdropImageSrc})` }}
-            />
             <div className="absolute inset-0 bg-black/55" />
           </div>
           <div className="relative">{contentSections}</div>
