@@ -13,7 +13,7 @@ export default function ContactPage() {
   return (
     <section className="py-14 sm:py-16">
       <Container className="grid gap-8 lg:grid-cols-[1fr,1.2fr]">
-        <div className="rounded-md border border-slate-700 bg-black p-6 shadow-sm">
+        <div className="rounded-md border border-slate-700 bg-black p-5 shadow-sm sm:p-6">
           <h1 className="text-3xl font-bold text-white sm:text-4xl">Contact Us</h1>
           <p className="mt-3 text-sm text-slate-300">
             Use the form to request a quote, book a brake test, or ask for parts and repair support.
@@ -22,13 +22,29 @@ export default function ContactPage() {
             <div>
               <h2 className="text-xl font-semibold text-white">Brake Testing</h2>
               <p className="mt-1">{contactDetails.brakeTestingLead.name}</p>
-              <p>{contactDetails.brakeTestingLead.phone}</p>
-              <p>{contactDetails.brakeTestingLead.email}</p>
+              <p>
+                <a href={`tel:${contactDetails.brakeTestingLead.phone.replace(/\s+/g, "")}`} className="transition hover:text-white">
+                  {contactDetails.brakeTestingLead.phone}
+                </a>
+              </p>
+              <p>
+                <a href={`mailto:${contactDetails.brakeTestingLead.email}`} className="break-all transition hover:text-white">
+                  {contactDetails.brakeTestingLead.email}
+                </a>
+              </p>
             </div>
             <div>
               <h2 className="text-xl font-semibold text-white">Components, Repairs & Maintenance</h2>
-              <p className="mt-1">{contactDetails.mainOffice.phone}</p>
-              <p>{contactDetails.mainOffice.email}</p>
+              <p className="mt-1">
+                <a href={`tel:${contactDetails.mainOffice.phone.replace(/\s+/g, "")}`} className="transition hover:text-white">
+                  {contactDetails.mainOffice.phone}
+                </a>
+              </p>
+              <p>
+                <a href={`mailto:${contactDetails.mainOffice.email}`} className="break-all transition hover:text-white">
+                  {contactDetails.mainOffice.email}
+                </a>
+              </p>
             </div>
             <p>
               <strong>Service Area:</strong> {contactDetails.serviceArea}

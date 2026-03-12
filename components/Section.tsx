@@ -13,8 +13,8 @@ export function Section({ id, title, subtitle, children, className = "" }: Secti
   return (
     <section id={id} className={`py-12 sm:py-16 ${className}`.trim()}>
       <Container>
-        {title ? <h2 className="text-3xl font-bold text-white sm:text-4xl">{title}</h2> : null}
-        {subtitle ? <p className="mt-3 max-w-3xl text-base text-slate-300">{subtitle}</p> : null}
+        {title ? <h2 className="text-2xl font-bold text-white sm:text-3xl lg:text-4xl">{title}</h2> : null}
+        {subtitle ? <p className="mt-3 max-w-3xl text-sm text-slate-300 sm:text-base">{subtitle}</p> : null}
         <div className="mt-6">{children}</div>
       </Container>
     </section>

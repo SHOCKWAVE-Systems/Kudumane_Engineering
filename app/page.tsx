@@ -60,21 +60,21 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-black/55" />
         <div className="mx-auto grid w-full max-w-6xl items-center gap-8 px-4 sm:px-6 lg:grid-cols-2 lg:px-8">
           <div className="relative z-10">
-            <h1 className="max-w-2xl text-balance text-4xl font-bold leading-[1.02] text-white sm:text-6xl">
+            <h1 className="max-w-2xl text-balance text-3xl font-bold leading-[1.02] text-white sm:text-5xl lg:text-6xl">
               Specialists In Brake Testing, Repair & Component Supply
             </h1>
-            <p className="mt-5 max-w-xl text-lg text-slate-200">
+            <p className="mt-5 max-w-xl text-base text-slate-200 sm:text-lg">
               Precision engineering solutions for mining, transport, and industrial applications.
             </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Button href="/contact">Book a Brake Test</Button>
               <Button href="#core-services" variant="outline">
                 View Services
               </Button>
             </div>
           </div>
-          <div className="relative z-10 rounded-md border border-slate-700 bg-black/55 p-6">
-            <h2 className="text-3xl font-bold text-white">Safety-Driven Engineering Excellence</h2>
+          <div className="relative z-10 rounded-md border border-slate-700 bg-black/55 p-5 sm:p-6">
+            <h2 className="text-2xl font-bold text-white sm:text-3xl">Safety-Driven Engineering Excellence</h2>
             <p className="mt-4 text-sm text-slate-300">
               Since 1998, Kudumane Brakes has delivered dependable heavy-duty brake testing, repairs, and parts supply.
               Our team combines OEM-certified brake testing knowledge, mechanical experience, and mining operational
@@ -89,7 +89,7 @@ export default function HomePage() {
 
       <section id="core-services" className="bg-white py-12 sm:py-16">
         <div className="mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-black">Our Core Services</h2>
+          <h2 className="text-3xl font-bold text-black sm:text-4xl">Our Core Services</h2>
           <p className="mt-3 max-w-3xl text-sm text-slate-700">
             Specialist services designed for mining, transport, and industrial operations.
           </p>
@@ -111,7 +111,7 @@ export default function HomePage() {
       <div className="relative overflow-hidden">
         <div className="pointer-events-none absolute inset-0">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-fixed opacity-20"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-scroll opacity-20 lg:bg-fixed"
             style={{ backgroundImage: `url(${withBasePath("/images/Dumptruck 2.png")})` }}
           />
           <div className="absolute inset-0 bg-black/70" />
@@ -120,7 +120,7 @@ export default function HomePage() {
         <div className="relative">
           <ScrollReveal delayMs={0}>
             <Section className="py-8 sm:py-10" title="Why Kudumane Engineering?">
-              <ul className="grid gap-3 rounded-md border border-slate-700 bg-brand-600 p-6 text-base text-slate-100 sm:grid-cols-2">
+              <ul className="grid gap-3 rounded-md border border-slate-700 bg-brand-600 p-5 text-sm text-slate-100 sm:grid-cols-2 sm:p-6 sm:text-base">
                 {whyKudumaneReasons.map((reason, index) => (
                   <li
                     key={reason}
@@ -137,7 +137,7 @@ export default function HomePage() {
 
           <ScrollReveal delayMs={120}>
             <Section className="py-8 sm:py-10" title="About Us">
-              <div className="rounded-md border border-slate-700 bg-brand-600 p-6 text-base leading-relaxed text-slate-100">
+              <div className="rounded-md border border-slate-700 bg-brand-600 p-5 text-sm leading-relaxed text-slate-100 sm:p-6 sm:text-base">
                 <p>
                   Since 1998, Kudumane Brakes has been committed to the safety, reliability, and performance of heavy-duty
                   braking systems. What began as a specialized service has grown into a trusted provider of brake supply,
@@ -162,13 +162,13 @@ export default function HomePage() {
               title="Engineering Excellence Driven By Safety"
               subtitle="Kudumane Brakes supports reliable fleet operations through quality workmanship and responsive service."
             >
-              <div className="rounded-md border border-slate-700 bg-brand-600 p-6 text-slate-100">
-                <p className="text-base leading-relaxed">
+              <div className="rounded-md border border-slate-700 bg-brand-600 p-5 text-slate-100 sm:p-6">
+                <p className="text-sm leading-relaxed sm:text-base">
                   We have built strong long-standing partnerships with major mining clients by maintaining high service
                   standards, technical accuracy, and dependable turnaround. Our focus is practical: safer vehicles, stable
                   braking performance, and reduced unplanned downtime.
                 </p>
-                <p className="mt-3 text-base leading-relaxed">
+                <p className="mt-3 text-sm leading-relaxed sm:text-base">
                   With over two decades of specialist brake industry experience, we continue to deliver trusted support in
                   testing, parts supply, and repairs.
                 </p>
@@ -178,7 +178,7 @@ export default function HomePage() {
 
           <ScrollReveal delayMs={360}>
             <Section className="py-8 sm:py-10" title="Service Area">
-              <div className="rounded-md border border-slate-700 bg-brand-600/85 p-6 text-base text-slate-100 backdrop-blur-[1px]">
+              <div className="rounded-md border border-slate-700 bg-brand-600/85 p-5 text-sm text-slate-100 backdrop-blur-[1px] sm:p-6 sm:text-base">
                 <p>
                   We support clients beyond this area. We currently provide free delivery of parts and components to the
                   following towns:
@@ -196,20 +196,22 @@ export default function HomePage() {
 
           <ScrollReveal delayMs={480}>
             <Section className="pt-2 pb-8 sm:pt-2 sm:pb-10">
-              <div className="rounded-md border border-slate-700 bg-black p-8 text-white">
-                <h2 className="text-4xl font-bold">Need dependable brake support for your fleet?</h2>
-                <p className="mt-2 text-base text-slate-300">
+              <div className="rounded-md border border-slate-700 bg-black p-5 text-white sm:p-8">
+                <h2 className="text-3xl font-bold sm:text-4xl">Need dependable brake support for your fleet?</h2>
+                <p className="mt-2 text-sm text-slate-300 sm:text-base">
                   Contact us to book a brake test, request parts supply, or discuss repair and maintenance support.
                 </p>
-                <div className="mt-5">
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
                   <Button href="/contact">Book a Brake Test</Button>
-                  <span className="ml-4 text-base text-slate-400">or call {contactDetails.mainOffice.phone}</span>
+                  <span className="text-sm text-slate-400 sm:text-base">or call {contactDetails.mainOffice.phone}</span>
                 </div>
-                <div className="mt-3 text-base text-slate-400">
-                  Brake Testing Contact: {contactDetails.brakeTestingLead.name} | {contactDetails.brakeTestingLead.phone}
-                </div>
-                <div className="mt-1 text-base text-slate-400">
-                  Email: {contactDetails.brakeTestingLead.email} | {contactDetails.mainOffice.email}
+                <div className="mt-4 grid gap-2 text-sm text-slate-400 sm:text-base">
+                  <div className="leading-relaxed">
+                    Brake Testing Contact: {contactDetails.brakeTestingLead.name} | {contactDetails.brakeTestingLead.phone}
+                  </div>
+                  <div className="leading-relaxed">
+                    Email: {contactDetails.brakeTestingLead.email} | {contactDetails.mainOffice.email}
+                  </div>
                 </div>
                 <div className="mt-4">
                   <Button href="/contact" variant="outline">
@@ -222,9 +224,9 @@ export default function HomePage() {
 
           <ScrollReveal delayMs={560}>
             <Section className="pt-0 pb-10 sm:pb-12" title="Our Location">
-              <div className="rounded-md border border-slate-700 bg-black p-6 text-slate-100">
-                <p className="text-2xl font-bold text-white">Kuruman</p>
-                <p className="mt-1 text-base text-slate-300">Northern Cape</p>
+              <div className="rounded-md border border-slate-700 bg-black p-5 text-slate-100 sm:p-6">
+                <p className="text-xl font-bold text-white sm:text-2xl">Kuruman</p>
+                <p className="mt-1 text-sm text-slate-300 sm:text-base">Northern Cape</p>
               </div>
             </Section>
           </ScrollReveal>

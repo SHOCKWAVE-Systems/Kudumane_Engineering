@@ -3,7 +3,7 @@ import { Barlow, Oswald } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { businessName, contactDetails, getSiteUrl, toAbsoluteUrl } from "@/lib/site";
+import { businessName, contactDetails, toAbsoluteUrl } from "@/lib/site";
 
 const bodyFont = Barlow({
   subsets: ["latin"],

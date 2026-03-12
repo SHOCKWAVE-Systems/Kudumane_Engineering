@@ -10,7 +10,7 @@ type ButtonProps = {
 };
 
 const baseClasses =
-  "inline-flex items-center justify-center rounded-sm border px-5 py-3 text-sm font-semibold uppercase tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2";
+  "inline-flex w-full items-center justify-center rounded-sm border px-5 py-3 text-center text-sm font-semibold uppercase tracking-wide transition focus:outline-none focus-visible:ring-2 focus-visible:ring-accent-500 focus-visible:ring-offset-2 sm:w-auto";
 
 const variants: Record<NonNullable<ButtonProps["variant"]>, string> = {
   primary: "border-accent-500 bg-accent-500 text-white hover:border-accent-600 hover:bg-accent-600",
