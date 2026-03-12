@@ -1,2 +1,0 @@
-:HL["/Kudumane_Engineering/_next/static/chunks/af19f5c8841c2dee.css","style"]
-0:{"buildId":"0iRmSPoqYWm56sy-Yi38k","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"/_not-found","paramType":null,"paramKey":"/_not-found","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

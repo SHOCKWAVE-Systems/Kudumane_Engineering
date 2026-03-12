@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0a0b0d;
+  --surface: #111317;
+  --text: #e9edf2;
+  --muted: #b2bac5;
+  --border: #2f3440;
+  --accent: #d72d25;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(180deg, #090a0c 0%, #0e1116 100%);
+  color: var(--text);
+  font-family: var(--font-body), "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading), "Arial Narrow", sans-serif;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 600ms ease, transform 600ms ease;
+  will-change: opacity, transform;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reason-fade-in {
+  opacity: 0;
+}
+
+.reveal-visible .reason-fade-in {
+  animation: reason-slide-fade 520ms ease forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes reason-slide-fade {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

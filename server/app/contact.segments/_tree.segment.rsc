@@ -1,7 +1,0 @@
-:HL["/Kudumane_Engineering/_next/static/chunks/af19f5c8841c2dee.css","style"]
-:HL["/Kudumane_Engineering/_next/static/media/0595f7052377a1a2-s.p.0de08f1e.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/Kudumane_Engineering/_next/static/media/6ad1cda2f16975ee-s.p.b58dc1ff.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/Kudumane_Engineering/_next/static/media/6c98c9fb873995d2-s.p.4a6499bc.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/Kudumane_Engineering/_next/static/media/a083361d37caf3d1-s.p.5c0d0b0d.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/Kudumane_Engineering/_next/static/media/c6e2684784a55443-s.p.ea91da97.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-0:{"buildId":"0iRmSPoqYWm56sy-Yi38k","tree":{"name":"","paramType":null,"paramKey":"","hasRuntimePrefetch":false,"slots":{"children":{"name":"contact","paramType":null,"paramKey":"contact","hasRuntimePrefetch":false,"slots":{"children":{"name":"__PAGE__","paramType":null,"paramKey":"__PAGE__","hasRuntimePrefetch":false,"slots":null,"isRootLayout":false}},"isRootLayout":false}},"isRootLayout":true},"staleTime":300}

@@ -1,0 +1,10 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F5F3EF"/>
+  <rect x="110" y="110" width="980" height="580" rx="20" fill="#E8E2D8" stroke="#C0B5A3" stroke-width="5"/>
+  <circle cx="350" cy="430" r="170" fill="#D2C9BB"/>
+  <rect x="560" y="250" width="430" height="120" rx="12" fill="#C4B7A5"/>
+  <rect x="560" y="390" width="430" height="120" rx="12" fill="#B8A894"/>
+  <rect x="560" y="530" width="430" height="70" rx="12" fill="#A99680"/>
+  <text x="190" y="190" fill="#1F2937" font-size="48" font-family="Segoe UI, sans-serif" font-weight="700">Core Business 3</text>
+</svg>
+
