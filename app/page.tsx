@@ -108,21 +108,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="relative overflow-hidden">
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute inset-0">
+      <div className="relative overflow-hidden bg-black">
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-full">
+          <div className="absolute left-1/2 top-[28rem] w-[90vw] max-w-[58rem] -translate-x-1/2 aspect-[3136/2094] sm:top-[32rem] sm:w-[82vw] sm:max-w-[64rem] lg:top-[34rem] lg:w-[70rem] lg:max-w-none">
             <Image
               src={withBasePath("/images/Dumptruck 2.png")}
               alt=""
               fill
-              className="object-cover opacity-30"
+              className="object-contain object-center opacity-45"
               unoptimized
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/70" />
           </div>
-          <div className="absolute inset-0 bg-black/55" />
         </div>
 
-        <div className="relative">
+        <div className="relative z-10">
           <ScrollReveal delayMs={0}>
             <Section className="py-8 sm:py-10" title="Why Kudumane Engineering?">
               <ul className="grid gap-3 rounded-md border border-slate-700 bg-brand-600 p-5 text-sm text-slate-100 sm:grid-cols-2 sm:p-6 sm:text-base">

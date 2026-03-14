@@ -116,14 +116,14 @@ export function CoreBusinessPage({ service }: CoreBusinessPageProps) {
       </section>
 
       {backdropImageSrc ? (
-        <div className="relative overflow-hidden">
-          <div className="pointer-events-none absolute inset-0">
-            <div className="absolute inset-0">
-              <Image src={backdropImageSrc} alt="" fill className="object-cover opacity-30" unoptimized />
+        <div className="relative overflow-hidden bg-black">
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-full">
+            <div className="absolute left-1/2 top-[18rem] w-[90vw] max-w-[58rem] -translate-x-1/2 aspect-[3136/2094] sm:top-[22rem] sm:w-[82vw] sm:max-w-[64rem] lg:top-[24rem] lg:w-[70rem] lg:max-w-none">
+              <Image src={backdropImageSrc} alt="" fill className="object-contain object-center opacity-45" unoptimized />
+              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/70" />
             </div>
-            <div className="absolute inset-0 bg-black/55" />
           </div>
-          <div className="relative">{contentSections}</div>
+          <div className="relative z-10">{contentSections}</div>
         </div>
       ) : (
         contentSections
