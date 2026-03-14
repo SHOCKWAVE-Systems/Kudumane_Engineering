@@ -10,6 +10,8 @@ export type ServicePageContent = {
   reasons: string[];
   imageSrc: string;
   backdropImageSrc?: string;
+  backdropImageWidth?: number;
+  backdropImageHeight?: number;
   ctaLabel?: string;
   contactHref?: string;
   extraSection?: {
@@ -144,6 +146,8 @@ export const servicePages: ServicePageContent[] = [
     ],
     imageSrc: "/images/Side Tipper Truck.png",
     backdropImageSrc: "/images/Part backdrop.png",
+    backdropImageWidth: 4162,
+    backdropImageHeight: 2306,
     contactHref: buildMailtoForService("Brakes, Clutches, Truck & Trailer Components"),
     extraSection: {
       title: "Product Display Gallery",

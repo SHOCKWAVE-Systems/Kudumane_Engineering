@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
+import { ParallaxBackdrop } from "@/components/ParallaxBackdrop";
 import { Section } from "@/components/Section";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { buildPageMetadata } from "@/lib/seo";
@@ -50,6 +51,8 @@ export default function HomePage() {
   ];
 
   const freeDeliveryTowns = ["Kuruman", "Kathu", "Postmasburg", "Danielskuil", "Olifantshoek", "Hotazel", "Blackrock"];
+  const scenePanelClassName = "rounded-md border border-slate-700 bg-brand-600";
+  const sceneAccentPanelClassName = "rounded-md border border-slate-700 bg-black";
 
   return (
     <>
@@ -108,24 +111,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="relative overflow-hidden bg-black">
-        <div className="pointer-events-none absolute inset-x-0 top-0 h-full">
-          <div className="absolute left-1/2 top-[28rem] w-[90vw] max-w-[58rem] -translate-x-1/2 aspect-[3136/2094] sm:top-[32rem] sm:w-[82vw] sm:max-w-[64rem] lg:top-[34rem] lg:w-[70rem] lg:max-w-none">
-            <Image
-              src={withBasePath("/images/Dumptruck 2.png")}
-              alt=""
-              fill
-              className="object-contain object-center opacity-45"
-              unoptimized
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/70" />
-          </div>
-        </div>
-
-        <div className="relative z-10">
+      <ParallaxBackdrop
+        src={withBasePath("/images/Dumptruck 2.png")}
+        width={3136}
+        height={2094}
+        className="border-y border-slate-900/80"
+      >
+        <div>
           <ScrollReveal delayMs={0}>
             <Section className="py-8 sm:py-10" title="Why Kudumane Engineering?">
-              <ul className="grid gap-3 rounded-md border border-slate-700 bg-brand-600 p-5 text-sm text-slate-100 sm:grid-cols-2 sm:p-6 sm:text-base">
+              <ul
+                className={`${scenePanelClassName} grid gap-3 p-5 text-sm text-slate-100 sm:grid-cols-2 sm:p-6 sm:text-base`}
+              >
                 {whyKudumaneReasons.map((reason, index) => (
                   <li
                     key={reason}
@@ -142,7 +139,7 @@ export default function HomePage() {
 
           <ScrollReveal delayMs={120}>
             <Section className="py-8 sm:py-10" title="About Us">
-              <div className="rounded-md border border-slate-700 bg-brand-600 p-5 text-sm leading-relaxed text-slate-100 sm:p-6 sm:text-base">
+              <div className={`${scenePanelClassName} p-5 text-sm leading-relaxed text-slate-100 sm:p-6 sm:text-base`}>
                 <p>
                   Since 1998, Kudumane Brakes has been committed to the safety, reliability, and performance of heavy-duty
                   braking systems. What began as a specialized service has grown into a trusted provider of brake supply,
@@ -167,7 +164,7 @@ export default function HomePage() {
               title="Engineering Excellence Driven By Safety"
               subtitle="Kudumane Brakes supports reliable fleet operations through quality workmanship and responsive service."
             >
-              <div className="rounded-md border border-slate-700 bg-brand-600 p-5 text-slate-100 sm:p-6">
+              <div className={`${scenePanelClassName} p-5 text-slate-100 sm:p-6`}>
                 <p className="text-sm leading-relaxed sm:text-base">
                   We have built strong long-standing partnerships with major mining clients by maintaining high service
                   standards, technical accuracy, and dependable turnaround. Our focus is practical: safer vehicles, stable
@@ -183,7 +180,7 @@ export default function HomePage() {
 
           <ScrollReveal delayMs={360}>
             <Section className="py-8 sm:py-10" title="Service Area">
-              <div className="rounded-md border border-slate-700 bg-brand-600/85 p-5 text-sm text-slate-100 backdrop-blur-[1px] sm:p-6 sm:text-base">
+              <div className={`${scenePanelClassName} p-5 text-sm text-slate-100 sm:p-6 sm:text-base`}>
                 <p>
                   We support clients beyond this area. We currently provide free delivery of parts and components to the
                   following towns:
@@ -201,7 +198,7 @@ export default function HomePage() {
 
           <ScrollReveal delayMs={480}>
             <Section className="pt-2 pb-8 sm:pt-2 sm:pb-10">
-              <div className="rounded-md border border-slate-700 bg-black p-5 text-white sm:p-8">
+              <div className={`${sceneAccentPanelClassName} p-5 text-white sm:p-8`}>
                 <h2 className="text-3xl font-bold sm:text-4xl">Need dependable brake support for your fleet?</h2>
                 <p className="mt-2 text-sm text-slate-300 sm:text-base">
                   Contact us to book a brake test, request parts supply, or discuss repair and maintenance support.
@@ -229,14 +226,14 @@ export default function HomePage() {
 
           <ScrollReveal delayMs={560}>
             <Section className="pt-0 pb-10 sm:pb-12" title="Our Location">
-              <div className="rounded-md border border-slate-700 bg-black p-5 text-slate-100 sm:p-6">
+              <div className={`${sceneAccentPanelClassName} p-5 text-slate-100 sm:p-6`}>
                 <p className="text-xl font-bold text-white sm:text-2xl">Kuruman</p>
                 <p className="mt-1 text-sm text-slate-300 sm:text-base">Northern Cape</p>
               </div>
             </Section>
           </ScrollReveal>
         </div>
-      </div>
+      </ParallaxBackdrop>
     </>
   );
 }

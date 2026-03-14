@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { Container } from "@/components/Container";
+import { ParallaxBackdrop } from "@/components/ParallaxBackdrop";
 import { Section } from "@/components/Section";
 import type { ServicePageContent } from "@/lib/services";
 import { withBasePath } from "@/lib/site";
@@ -13,6 +14,10 @@ export function CoreBusinessPage({ service }: CoreBusinessPageProps) {
   const contactHref = service.contactHref || "/contact";
   const backdropImageSrc =
     service.slug === "/core-business-3" && service.backdropImageSrc ? withBasePath(service.backdropImageSrc) : null;
+  const backdropImageWidth = service.slug === "/core-business-3" ? service.backdropImageWidth : null;
+  const backdropImageHeight = service.slug === "/core-business-3" ? service.backdropImageHeight : null;
+  const backdropOverlayClassName =
+    service.slug === "/core-business-3" ? "bg-gradient-to-b from-black/90 via-black/80 to-black/90" : undefined;
   const contentSections = (
     <>
       <Section title="What We Do" subtitle="Practical, field-ready service scope tailored for industrial and mining-adjacent use.">
@@ -115,16 +120,15 @@ export function CoreBusinessPage({ service }: CoreBusinessPageProps) {
         </Container>
       </section>
 
-      {backdropImageSrc ? (
-        <div className="relative overflow-hidden bg-black">
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-full">
-            <div className="absolute left-1/2 top-[18rem] w-[90vw] max-w-[58rem] -translate-x-1/2 aspect-[3136/2094] sm:top-[22rem] sm:w-[82vw] sm:max-w-[64rem] lg:top-[24rem] lg:w-[70rem] lg:max-w-none">
-              <Image src={backdropImageSrc} alt="" fill className="object-contain object-center opacity-45" unoptimized />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/35 to-black/70" />
-            </div>
-          </div>
-          <div className="relative z-10">{contentSections}</div>
-        </div>
+      {backdropImageSrc && backdropImageWidth && backdropImageHeight ? (
+        <ParallaxBackdrop
+          src={backdropImageSrc}
+          width={backdropImageWidth}
+          height={backdropImageHeight}
+          overlayClassName={backdropOverlayClassName}
+        >
+          {contentSections}
+        </ParallaxBackdrop>
       ) : (
         contentSections
       )}
